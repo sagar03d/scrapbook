@@ -4,7 +4,7 @@ if(!isset($_GET['id'])){
 	echo "You should not be here illegal";die;
 }
 else{
-	$query=mysqli_query($connect,"SELECT * from user");
+	$query=mysqli_query($connect,"SELECT * from user ORDER BY id");
 }
 ?>
 <html>
