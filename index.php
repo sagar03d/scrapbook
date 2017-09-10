@@ -6,8 +6,69 @@
 <link rel="stylesheet" href="jquery-ui.css">
 	<title>sign up</title>
 	<script type="text/javascript">
+	/*function sub(){
+		$a = document.getElementById("name").value;
+		if($a == ""){
+			alert("Please enter your name");
+			return false;
+		}
+	}*/
 		$(document).ready(function(){
-			$("birthday").datepicker();
+			$("#birthday").datepicker();
+
+			$("#btn").click(function(){
+				var flag = 0;
+					var gender = $('[name="gender[]"]');
+				for(var j=0;j<gender.length;j++){
+					if(gender[j].checked){
+						flag++;
+					}
+				}
+
+					if($('[name="name"]').val()==""){
+				alert("Please Enter your name");
+				$('[name="name"]').focus();
+				return false;
+				}
+
+				if($('[name="password"]').val()==""){
+				alert("Enter your password");
+				$('[name="password"]').focus();
+				return false;
+				}
+
+				if($('[name="email"]').val()==""){
+				alert("Enter your email");
+				$('[name="email"]').focus();
+				return false;
+				}
+
+				if($('[name="birthday"]').val()==""){
+				alert("Enter your birthday");
+				$('[name="birthday"]').focus();
+				return false;
+				}
+
+				if($('[name="city"]').val()==""){
+				alert("Choose your city");
+				$('[name="city"]').focus();
+				return false;
+				}
+				if(flag==0){
+					alert("Please Select your gender");
+					return false;
+				}
+			});
+			$("#em").blur(function(){
+			var main,at, dot;
+			main = $("#em").val();
+			at = main.indexOf("@");
+			dot = main.lastIndexOf(".");
+			if(at<1 || dot<at+1 || dot+1>=main.length){
+				alert("Please Enter a valid Email");
+			}
+
+		});
 		});
 	</script>
 </head>
@@ -20,13 +81,13 @@
 <form action="index_backend.php" method="post" enctype="multipart/form-data">
 <table>
 	<tr>
-		<td><label>Name:<input type="text" name="name" style="width:70%;" onclick="ar()"></label><br></td>
+		<td><label>Name:<input type="text" name="name" style="width:70%;"></label><br></td>
 	</tr>
 	<tr>
-		<td><label>Password: <input type="password" name="password" style="width:60%;"></label></td><br>
+		<td><label>Password: <input type="password" name="password" id="password" style="width:60%;"></label></td><br>
 	</tr>
 	<tr>
-	<td><label>Email: <input type="text" name="email" style="width:70%;"></label></td><br>
+	<td><label>Email: <input type="text" name="email" id="em" style="width:70%;"></label></td><br>
 	</tr>
 	<tr>
 	<td><label>Birthday: <input type="text" id="birthday" name="birthday" style="width:63%;"></label></td><br>
