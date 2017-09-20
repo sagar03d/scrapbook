@@ -2,7 +2,7 @@
 if(isset($_SESSION['id'])){
 $id = $_SESSION['id'];
 }
-$query = mysqli_query($connect, "SELECT * FROM user WHERE id='$id'") or die("Connection Error");
+$query = mysqli_query($ob->connect, "SELECT * FROM user WHERE id='$id'") or die("Connection Error");
 $row = mysqli_fetch_array($query);
 $ar = $row['skill'];
 $br = $row['gender'];

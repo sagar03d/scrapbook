@@ -14,9 +14,9 @@ $destination = "upload/".$new;
 $source = $_FILES['image']['tmp_name'];
 move_uploaded_file($source,$destination);
 //store the values
-$query = mysqli_query($connect,"INSERT INTO user(name,password,email,birthday,city,skill,gender,image,Status) VALUES('$name','$password','$email','$birthday','$city','$skill','$gender','$destination',0)");
+$query = $ob->insert($name,$password,$email,$birthday,$city,$skill,$gender,$destination);
 if($query==false){
-	echo mysqli_error($connect);
+	echo mysqli_error($ob->connect);
 	die;
 }
 else{

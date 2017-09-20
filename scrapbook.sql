@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2017 at 09:30 PM
+-- Generation Time: Sep 10, 2017 at 09:02 PM
 -- Server version: 5.7.19-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `password`) VALUES
-(1, 'root', 'root', '202cb962ac59075b964b07152d234b70');
+(1, 'Sagar Dolui', 'sagar@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -59,6 +59,15 @@ CREATE TABLE `user` (
   `Status` int(2) NOT NULL,
   `online` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `password`, `email`, `birthday`, `city`, `skill`, `gender`, `image`, `Status`, `online`) VALUES
+(9, 'Sagar Dolui', '81dc9bdb52d04dc20036dbd8313ed055', 'sagar@gmail.com', '03-01-1996', 'Delhi', 'C,C++', 'Male', 'upload/1504945071_77_sagar.jpg', 0, 0),
+(10, 'Sudip Karmakar', '202cb962ac59075b964b07152d234b70', 'sudipkarmakar24@gmail.com', '12-05-1996', 'Mumbai', 'C,C++,PHP', 'Male', 'upload/1504945071_77_sagar.jpgsudip.jpgkallol.jpgsudip.jpg', 0, 1),
+(17, 'sagar1', '202cb962ac59075b964b07152d234b70', '12', '09/10/2017', 'Mumbai', 'C', 'Male', 'upload/1505056825_67_tamal.jpg', 0, 0);
 
 --
 -- Indexes for dumped tables

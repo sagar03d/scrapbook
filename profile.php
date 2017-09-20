@@ -1,9 +1,9 @@
 <?php
 include('connection.php');
 $id = $_SESSION['id'];
-$query = mysqli_query($connect,"SELECT * FROM `user` WHERE id='$id'");
+$query = mysqli_query($ob->connect,"SELECT * FROM `user` WHERE id='$id'");
 if($query== false){
-	echo mysqli_error($connect);
+	echo mysqli_error($ob->connect);
 }
 else{
 	$row = mysqli_fetch_array($query);
@@ -35,9 +35,9 @@ else{
 <?php 
 if(isset($_GET['on'])){
 	$on=$_GET['on'];
-	$q = mysqli_query($connect,"UPDATE user SET online = 1 WHERE id='$on'") or die(mysqli_error($connect));
+	$q = mysqli_query($ob->connect,"UPDATE user SET online = 1 WHERE id='$on'") or die(mysqli_error($connect));
 }
-$user_on = mysqli_query($connect,"SELECT online FROM user") or die(mysqli_error($connect));
+$user_on = mysqli_query($ob->connect,"SELECT online FROM user") or die(mysqli_error($connect));
 $a=0;
 while($online=mysqli_fetch_array($user_on)){
 	$b = $online['online'];
