@@ -1,4 +1,4 @@
-# scrapbook
+# scrapbook [![Build Status](https://travis-ci.org/sagar03d/scrapbook.svg?branch=master)](https://travis-ci.org/sagar03d/scrapbook) 
 This is my Personal Project.
 
 # Details
