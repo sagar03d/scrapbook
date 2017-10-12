@@ -1,4 +1,4 @@
-# scrapbook [![Build Status](https://travis-ci.org/sagar03d/scrapbook.svg?branch=master)](https://travis-ci.org/sagar03d/scrapbook) [![Coverage Status](https://coveralls.io/repos/github/sagar03d/scrapbook/badge.svg?branch=master)](https://coveralls.io/github/sagar03d/scrapbook?branch=master)
+# scrapbook [![Coverage Status](https://coveralls.io/repos/github/sagar03d/scrapbook/badge.svg?branch=master)](https://coveralls.io/github/sagar03d/scrapbook?branch=master)
 
 This is my Personal Project.
 
